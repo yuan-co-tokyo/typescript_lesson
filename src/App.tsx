@@ -67,6 +67,15 @@ let memory: 256 | 512 | 1024
 memory = 256
 memory = 1024
 
+// typeOf
+let msg: string = "Hi";
+let msg2: typeof msg;
+msg2 = "Bye"
+
+let animal: {cat: "small cat"};
+let newAnimal: typeof animal = {cat: "big cat"};
+
+
 function App() {
   return (
     <div className="App">
