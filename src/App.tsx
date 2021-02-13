@@ -48,8 +48,16 @@ const userA: USER = {
   age: 30,
   city: "Tokyo",
   username: "xxx",
-  password: "yyy"
-}
+  password: "yyy",
+};
+
+// union types
+let value: boolean | number
+value = true;
+value = 1;
+
+let arrayUni: (number | string)[];
+arrayUni = [0, 1, 2, "test"];
 
 function App() {
   return (
