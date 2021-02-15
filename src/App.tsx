@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Data from './data.json';
+import TestComponent from './TestComponent';
 
 type USERS = typeof Data;
 
@@ -178,11 +179,11 @@ const gen14 = funcGen4({price: 2000});
 
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <TestComponent text="hello from app"/>
       </header>
     </div>
   );
