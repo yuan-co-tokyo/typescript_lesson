@@ -93,6 +93,25 @@ let keySports: keyof typeof SPORTS;
 keySports = "baseball"
 console.log(keySports);
 
+// enum
+enum OS {
+  Windows,
+  Mac,
+  Linux,
+}
+interface PC {
+  id: number;
+  osType: OS;
+}
+const PC1 = {
+  id: 1,
+  osType: OS.Windows,
+}
+const PC2 = {
+  id: 2,
+  osType: OS.Mac,
+}
+
 
 function App() {
   return (
