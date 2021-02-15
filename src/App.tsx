@@ -112,6 +112,19 @@ const PC2 = {
   osType: OS.Mac,
 }
 
+// 型の互換性
+const comp1 = "test";
+let comp2: string = comp1;
+
+// let comp3: string = "test";
+// let copm4 = "test" = comp3;
+
+// let funcComp1 = (x:number) => {};
+// let funcComp2 = (x:string) => {};
+
+// funcComp1 = funcComp2;
+// funcComp2 = funcComp1;
+
 
 function App() {
   return (
