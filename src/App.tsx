@@ -125,6 +125,53 @@ let comp2: string = comp1;
 // funcComp1 = funcComp2;
 // funcComp2 = funcComp1;
 
+// Generics
+interface GEN<T>{
+  item: T;
+};
+const gen0: GEN<string> = { item: "hello" };
+// const gen1: GEN = { item: "hello" };
+const gen2: GEN<number> = { item: 1 };
+
+interface GEN1<T = string>{
+  item: T;
+};
+const gen3: GEN1 = { item: "hello" };
+const gen4: GEN1<number> = { item: 10 };
+
+interface GEN2<T extends string | number > {
+  item: T;
+};
+const gen5: GEN2<string> = { item: "test" };
+const gen6: GEN2<number> = { item: 5 };
+// const gen7: GEN2<boolean> = { item: true };
+
+function funcGen<T>(props: T){
+  return {item: props}
+};
+const gen8 = funcGen("test");
+const gen9 = funcGen<string>("test");
+const gen10 = funcGen<string | null>(null);
+
+function funcGen1<T extends string | null>(props: T){
+  return { value: props}
+};
+const gen11 = funcGen1("test");
+// const gen12 = funcGen1(100);
+
+interface Props{
+  price: number;
+}
+function funcGen2<T extends Props>(props: T){
+  return { value: props.price}
+}
+const gen13 = funcGen2({price: 1000});
+
+const funcGen4 = <T extends Props>(props: T) => {
+  return { value: props.price}
+}
+const gen14 = funcGen4({price: 2000});
+
 
 function App() {
   return (
