@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+// ヘッダー要素が描画されることを確認
+test('Appヘッダーが描画される', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = screen.getByRole('banner');
+  expect(headerElement).toBeInTheDocument();
 });

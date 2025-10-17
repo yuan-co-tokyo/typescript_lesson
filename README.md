@@ -44,3 +44,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 開発メモ
+
+- `postcss-safe-parser` が `postcss/lib/tokenize` を参照する際のエクスポート制限に対処するため、`scripts/prepare-postcss-safe-parser.js` で依存モジュールを起動前に補正しています。`yarn start` / `yarn test` / `yarn build` では自動的に実行されます。
