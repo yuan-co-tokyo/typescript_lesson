@@ -1,38 +1,121 @@
-.App {
+.app {
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 24px 16px 48px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2933;
+}
+
+.app__title {
+  margin-bottom: 16px;
+  font-size: 28px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-form {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.todo-form__label {
+  font-size: 14px;
+  color: #52606d;
+}
+
+.todo-form__controls {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-form__input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.todo-form__button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-form__button:disabled {
+  background-color: #9aa5b1;
+  cursor: not-allowed;
+}
+
+.todo-list__empty {
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  border: 1px dashed #cbd2d9;
+  border-radius: 4px;
+  color: #52606d;
+}
+
+.todo-list__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-list__item {
+  border: 1px solid #e4e7eb;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+}
+
+.todo-list__item--done {
+  background-color: #f0f4f8;
+}
+
+.todo-list__task {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list__task span {
+  word-break: break-word;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.todo-actions__summary {
+  font-size: 14px;
+  color: #52606d;
+}
+
+.todo-actions__clear {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f87171;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-actions__clear:disabled {
+  background-color: #cbd2d9;
+  cursor: not-allowed;
 }
