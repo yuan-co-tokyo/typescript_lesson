@@ -2,8 +2,10 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('TypeScript レッスンの見出しが表示される', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const heading = screen.getByRole('heading', { name: 'TypeScript Lesson' });
+  expect(heading).toBeInTheDocument();
+  const description = screen.getByText('型定義と基本的な構文を学習しましょう。');
+  expect(description).toBeInTheDocument();
 });

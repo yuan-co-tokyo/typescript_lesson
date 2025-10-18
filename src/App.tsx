@@ -35,7 +35,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <h1>TypeScript Lesson</h1>
+        <p>型定義と基本的な構文を学習しましょう。</p>
       </header>
     </div>
   );
